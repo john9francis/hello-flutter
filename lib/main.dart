@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'button.dart';
 
 void main() {
   runApp(
@@ -12,14 +13,3 @@ void main() {
   );
 }
 
-class MyButton extends StatelessWidget {
-  const MyButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => print("Hey"),
-
-    );
-  }
-}
