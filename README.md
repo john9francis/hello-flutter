@@ -1,6 +1,14 @@
-# hello
+# Basic Flutter app
 
-full-screen button commit
+# Ignored files
+```
+android/
+ios/
+linux/
+macos/
+web/
+windows/
+```
 
 A new Flutter project.
 - [My notes](NOTES.md)
