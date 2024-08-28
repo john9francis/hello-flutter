@@ -16,7 +16,7 @@ A new Flutter project.
 
 # Creating and running a flutter app
 ```
-flutter create <app name>
+flutter create .
 flutter run
 ```
 
