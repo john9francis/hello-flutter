@@ -5,10 +5,10 @@ class TextWidget extends StatefulWidget {
   const TextWidget({super.key});
 
   @override
-  _TextState createState() => _TextState();
+  TextState createState() => TextState();
 }
 
-class _TextState extends State<TextWidget> {
+class TextState extends State<TextWidget> {
   var number = 0;
 
   @override

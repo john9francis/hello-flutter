@@ -6,7 +6,17 @@ void main() {
     const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: MyButton(),
+          child: Padding(
+            padding: EdgeInsets.all(180.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                MyButton(),
+                TextWidget()
+              ],
+            )
+          ),
         ),
       ),
     ),
