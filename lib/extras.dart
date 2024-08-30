@@ -10,7 +10,7 @@ class InfoHover extends StatelessWidget {
     return Tooltip(
       message: hoverMessage,
       child: const Icon(
-        Icons.integration_instructions,
+        Icons.info_outline,
         color: Colors.blue,
       )
     );
