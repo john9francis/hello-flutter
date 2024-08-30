@@ -42,7 +42,7 @@ class PatientInfoForm extends StatelessWidget {
             SizedBox(height: betweenPadding),
             TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
             SizedBox(height: betweenPadding),
-            TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M"), tooltipMsg: "Gender for the phantom",),
+            TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M"), tooltipMsg: "We ask for patient's gender to best match their body type with a reference phantom.",),
             SizedBox(height: betweenPadding),
             TextInputRow(labelText: "Date of radiation exposure", textField: DateField()),
             SizedBox(height: betweenPadding),
