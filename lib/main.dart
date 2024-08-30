@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           title: const Text(appTitle),
           centerTitle: true,
           ),
-        body: const PatientInfoForm()
+        body: const ScrollbarWrapper(form: PatientInfoForm())
       ),
     );
   }

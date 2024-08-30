@@ -16,3 +16,28 @@ class InfoHover extends StatelessWidget {
     );
   }
 }
+
+class ScrollbarWrapper extends StatefulWidget {
+  final Widget form; // the form that's inside the scrollbar
+
+  const ScrollbarWrapper({super.key, required this.form});
+
+  @override
+  State<ScrollbarWrapper> createState() => _ScrollbarWrapperState();
+}
+
+class _ScrollbarWrapperState extends State<ScrollbarWrapper> {
+  final ScrollController _controllerOne = ScrollController();
+
+  @override
+  Widget build(BuildContext context) {
+    return RawScrollbar(
+      controller: _controllerOne,
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        controller: _controllerOne,
+        child: widget.form,
+      )
+    );
+  }
+}
