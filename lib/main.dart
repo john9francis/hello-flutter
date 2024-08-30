@@ -12,8 +12,13 @@ void main() {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                MyButton(),
-                TextWidget()
+                TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter height',
+                  ),
+                ),
+                MyTextField(hintText: 'Test')
               ],
             )
           ),
@@ -23,3 +28,19 @@ void main() {
   );
 }
 
+class MyTextField extends StatelessWidget {
+  final String hintText;
+
+  // Constructor to accept hintText
+  const MyTextField({required this.hintText});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        border: const OutlineInputBorder(),
+        hintText: hintText, // Use the hintText passed to the constructor
+      ),
+    );
+  }
+}
