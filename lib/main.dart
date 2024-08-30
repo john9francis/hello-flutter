@@ -27,6 +27,8 @@ class MyApp extends StatelessWidget {
 class PatientInfoForm extends StatelessWidget {
   const PatientInfoForm({super.key});
 
+  static const betweenPadding = 16.0;
+
   @override
   Widget build(BuildContext context) {
     return const Center(
@@ -37,11 +39,13 @@ class PatientInfoForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextInputRow(labelText: "Height", textField: BasicTextField(hintText: "e.g. 5\"11")),
-            SizedBox(height: 16),
+            SizedBox(height: betweenPadding),
             TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
-            SizedBox(height: 16),
+            SizedBox(height: betweenPadding),
             TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M"), tooltipMsg: "Gender for the phantom",),
-            SizedBox(height: 16),
+            SizedBox(height: betweenPadding),
+            TextInputRow(labelText: "Date of radiation exposure", textField: DateField()),
+            SizedBox(height: betweenPadding),
             MyButton(),
           ],
         )

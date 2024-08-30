@@ -16,3 +16,12 @@ class BasicTextField extends StatelessWidget {
     );
   }
 }
+
+class DateField extends StatelessWidget {
+  const DateField({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InputDatePickerFormField(firstDate: DateTime(1950), lastDate: DateTime.now());
+  }
+}
