@@ -40,8 +40,7 @@ class PatientInfoForm extends StatelessWidget {
             SizedBox(height: 16),
             TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
             SizedBox(height: 16),
-            TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M")),
-            InfoHover(hoverMessage: "Enter the gender that your body type is most similar to."),
+            TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M"), tooltipMsg: "Gender for the phantom",),
             SizedBox(height: 16),
             MyButton(),
           ],
@@ -56,9 +55,10 @@ class PatientInfoForm extends StatelessWidget {
 class TextInputRow extends StatelessWidget {
   final Widget textField; // This will be your text field widget
   final String labelText; // Label text for the row
+  final String tooltipMsg;
 
   // Constructor to initialize labelText and textField
-  const TextInputRow({required this.labelText, required this.textField, super.key});
+  const TextInputRow({required this.labelText, required this.textField, this.tooltipMsg="", super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,12 @@ class TextInputRow extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: Text(labelText),
+          child: Row(
+            children: [
+              Text(labelText),
+              if (tooltipMsg.isNotEmpty) InfoHover(hoverMessage: tooltipMsg)
+            ],
+          ),
         ),
         Expanded(
           flex: 5,
