@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'text_inputs.dart';
 import 'button.dart';
+import 'extras.dart';
 
 void main() => runApp(const MyApp());
 
@@ -40,6 +41,7 @@ class PatientInfoForm extends StatelessWidget {
             TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
             SizedBox(height: 16),
             TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M")),
+            InfoHover(hoverMessage: "Enter the gender that your body type is most similar to."),
             SizedBox(height: 16),
             MyButton(),
           ],
