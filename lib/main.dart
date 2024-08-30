@@ -12,13 +12,9 @@ void main() {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Enter height',
-                  ),
-                ),
-                MyTextField(hintText: 'Test')
+                MyTextField(hintText: 'Enter Height'),
+                MyTextField(hintText: 'Enter Weight'),
+                MyTextField(hintText: 'Enter Birth Gender')
               ],
             )
           ),
