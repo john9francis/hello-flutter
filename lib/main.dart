@@ -72,8 +72,8 @@ class TextInputRow extends StatelessWidget {
           flex: 1,
           child: Row(
             children: [
-              Text(labelText),
-              if (tooltipMsg.isNotEmpty) InfoHover(hoverMessage: tooltipMsg)
+              Flexible(child: Text(labelText)),
+              if (tooltipMsg.isNotEmpty) Flexible(child: InfoHover(hoverMessage: tooltipMsg)),
             ],
           ),
         ),
