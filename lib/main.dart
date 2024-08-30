@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'text_inputs.dart';
+import 'button.dart';
 
 void main() => runApp(const MyApp());
 
@@ -35,8 +36,12 @@ class PatientInfoForm extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextInputRow(labelText: "Height", textField: BasicTextField(hintText: "e.g. 5\"11")),
+            SizedBox(height: 16),
             TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
+            SizedBox(height: 16),
             TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M")),
+            SizedBox(height: 16),
+            MyButton(),
           ],
         )
       ),
