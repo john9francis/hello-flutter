@@ -51,7 +51,7 @@ class PatientInfoForm extends StatelessWidget {
 }
 
 
-// Define a widget class that takes a TextField type and other parameters
+// This widget contains a text label, an input field of your choice, and an optional tooltip message.
 class TextInputRow extends StatelessWidget {
   final Widget textField; // This will be your text field widget
   final String labelText; // Label text for the row
