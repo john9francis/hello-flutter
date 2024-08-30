@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
+import 'text_inputs.dart';
 
 void main() => runApp(const MyApp());
 
@@ -34,9 +34,24 @@ class PatientInfoForm extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            MyTextField(hintText: 'Enter Height'),
-            MyTextField(hintText: 'Enter Weight'),
-            MyTextField(hintText: 'Enter Birth Gender')
+            Row(
+              children: [
+                Flexible(flex: 1, child: Text('Enter Height:')),
+                Flexible(flex: 3, child: BasicTextField(hintText: '5"11'))
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(child: Text('Enter Weight:')),
+                Expanded(child: BasicTextField(hintText: '195'))
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(child: Text('Enter Gender:')),
+                Expanded(child: BasicTextField(hintText: 'M/F'))
+              ],
+            ),
           ],
         )
       ),
@@ -44,19 +59,3 @@ class PatientInfoForm extends StatelessWidget {
   }
 }
 
-class MyTextField extends StatelessWidget {
-  final String hintText;
-
-  // Constructor to accept hintText
-  const MyTextField({required this.hintText, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        border: const OutlineInputBorder(),
-        hintText: hintText, // Use the hintText passed to the constructor
-      ),
-    );
-  }
-}
