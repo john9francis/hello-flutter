@@ -34,27 +34,38 @@ class PatientInfoForm extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
-              children: [
-                Flexible(flex: 1, child: Text('Enter Height:')),
-                Flexible(flex: 3, child: BasicTextField(hintText: '5"11'))
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(child: Text('Enter Weight:')),
-                Expanded(child: BasicTextField(hintText: '195'))
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(child: Text('Enter Gender:')),
-                Expanded(child: BasicTextField(hintText: 'M/F'))
-              ],
-            ),
+            TextInputRow(labelText: "Height", textField: BasicTextField(hintText: "e.g. 5\"11")),
+            TextInputRow(labelText: "Weight", textField: BasicTextField(hintText: "e.g. 145")),
+            TextInputRow(labelText: "Gender", textField: BasicTextField(hintText: "e.g. M")),
           ],
         )
       ),
+    );
+  }
+}
+
+
+// Define a widget class that takes a TextField type and other parameters
+class TextInputRow extends StatelessWidget {
+  final Widget textField; // This will be your text field widget
+  final String labelText; // Label text for the row
+
+  // Constructor to initialize labelText and textField
+  const TextInputRow({required this.labelText, required this.textField, super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          flex: 1,
+          child: Text(labelText),
+        ),
+        Expanded(
+          flex: 5,
+          child: textField,
+        ),
+      ],
     );
   }
 }
